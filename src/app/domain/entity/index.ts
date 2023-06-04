@@ -1,2 +1,2 @@
-export { default as Match } from "./match";
+export { default as Group } from "./group";
 export { default as Member } from "./member";

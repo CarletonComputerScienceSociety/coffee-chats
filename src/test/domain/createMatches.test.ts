@@ -1,4 +1,4 @@
-import { CreateMatchesService, Match, Member } from "../../app/domain";
+import { CreateGroupsService, Group, Member } from "../../app/domain";
 
 describe("test CreateMatchesService", () => {
   // TODO: we shouldn't need to do this null this
@@ -12,14 +12,14 @@ describe("test CreateMatchesService", () => {
     const member5 = new Member("id5", "first", "last", true, false);
     const member6 = new Member("id6", "first", "last", true, false);
 
-    const match1 = new Match(member1, member2);
-    const match2 = new Match(member3, member4);
-    const match3 = new Match(member5, member6);
+    const group1 = new Group([member1, member2]);
+    const group2 = new Group([member3, member4]);
+    const group3 = new Group([member5, member6]);
 
     const members = [member1, member2, member3, member4, member5, member6];
-    const previousMatches = [match1, match2, match3];
+    const previousGroups = [group1, group2, group3];
 
-    service = new CreateMatchesService(members, previousMatches);
+    service = new CreateGroupsService(members, previousGroups);
   });
 
   describe("test eligibleMatches", () => {

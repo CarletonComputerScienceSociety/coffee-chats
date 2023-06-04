@@ -1,2 +1,2 @@
-export { Match, Member } from "./entity";
-export { default as CreateMatchesService } from "./createMatches";
+export { Group, Member } from "./entity";
+export { default as CreateGroupsService } from "./createGroups";
